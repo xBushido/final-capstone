@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 
 import "./Navbar.css";
 
+
+
 const Navbar = () => {
     const [click, setClick] = useState(false);
 
@@ -37,11 +39,11 @@ const Navbar = () => {
       setShowDropdown(!showDropdown);
     }
     useEffect(() => { 
-      const storedemail = sessionStorage.getItem("email");
+      const storedname = sessionStorage.getItem("name");
 
-      if (storedemail) {
+      if (storedname) {
             setIsLoggedIn(true);
-            setUsername(storedemail);
+            setUsername(storedname);
           }
         }, []);
   return (
@@ -69,6 +71,9 @@ const Navbar = () => {
         </li>
         {isLoggedIn?(
           <>
+            <li className="linkname">
+                Welcome, {username}
+            </li>
             <li className="link">
               <button className="btn2" onClick={handleLogout}>
                 Logout
