@@ -1,26 +1,22 @@
 import React, { useState } from 'react';
-import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
-import TimePicker from 'react-time-picker';
 import 'react-time-picker/dist/TimePicker.css';
 
 const AppointmentForm = ({ doctorName, doctorSpeciality, onSubmit }) => {
     const [name, setName] = useState('');
     const [phoneNumber, setPhoneNumber] = useState('');
-    const [selectedDate, setSelectedDate] = useState(new Date());
+    const [selectedDate, setSelectedDate] = useState('');
     const [selectedTime, setSelectedTime] = useState('12:00');
   
     const handleFormSubmit = (e) => {
       e.preventDefault();
-      const selectedDateTime = new Date(selectedDate);
-      const hoursAndMinutes = selectedTime.split(':');
-      selectedDateTime.setHours(hoursAndMinutes[0]);
-      selectedDateTime.setMinutes(hoursAndMinutes[1]);
+    
+      const date = selectedDate.toLocaleDateString('en-US');
   
-      onSubmit({ name, phoneNumber, selectedDateTime });
+      onSubmit({ name, phoneNumber, date, selectedTime });
       setName('');
       setPhoneNumber('');
-      setSelectedDate(new Date());
+      setSelectedDate(new Date().toLocaleDateString('en-US'));
       setSelectedTime('12:00');
     };
   
