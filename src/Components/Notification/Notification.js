@@ -46,7 +46,7 @@ const Notification = ({ children }) => {
                             <strong>Name:</strong> {appointment.name}
                         </p>
                         <p className="appointment-card__message">
-                            <strong>Date of Appointment:</strong> {appointment.selectedDate}
+                            <strong>Date of Appointment:</strong> {appointment.date}
                         </p>
                         <p className="appointment-card__message">
                             <strong>Time Slot:</strong> {appointment.selectedTime}
