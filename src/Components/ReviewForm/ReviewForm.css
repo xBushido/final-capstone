@@ -1,0 +1,32 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+  }
+  
+  table {
+    border-collapse: collapse;
+    width: 900px;
+  }
+  
+  th, td {
+    padding: 12px;
+    border-right: 1px solid #FBFBF2;
+    border-left: 1px solid #FBFBF2;
+    text-align: left;
+  }
+
+  th {
+    background-color: #FBFBF2;
+  }
+  
+  button {
+    padding: 6px 12px;
+    background-color: #4E4187;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  

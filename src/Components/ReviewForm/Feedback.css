@@ -1,0 +1,15 @@
+body {
+    size: 130%;
+}
+
+.box {
+    background-color: rgb(214,143,214,35%);
+    padding: 10%;
+    border: 2px;
+    border-radius: 20px;
+    width: 450px;
+}
+
+.box .feedbk {
+    text-align: center;
+}

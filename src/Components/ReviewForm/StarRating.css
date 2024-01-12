@@ -1,0 +1,19 @@
+.star-rating {
+    font-size: 24px; /* Adjust the font size as needed */
+  }
+  
+  .star-rating span {
+    color: rgb(214, 143, 214, 34%); /* Default star color */
+    transition: color 0.2s; /* Add a smooth transition effect */
+    cursor: pointer;
+  }
+    .star-rating .rating {
+        font-size: 17px;
+    }
+  
+  .star-rating span:hover,
+  .star-rating span.active,
+  .star-rating span.hovered {
+    color: #4E4187; /* Darkened color on hover, when clicked, and for previous stars */
+  }
+  
