@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useReview } from './ReviewContext';
 import './Feedback.css';
 import StarRating from './StarRating';
 
 function Feedback() {
   const navigate = useNavigate();
+  const { setReviewData } = useReview();
 
   const [selectedRating, setSelectedRating] = useState(0);
   const [showForm, setShowForm] = useState(false);
@@ -29,7 +31,11 @@ function Feedback() {
 
     if (formData.name && formData.review && formData.rating > 0) {
       setShowWarning(false);
-      navigate("/ReviewForm")
+
+      // Set the review data in the context
+      setReviewData(formData);
+
+      navigate('/ReviewForm');
     } else {
       setShowWarning(true);
     }

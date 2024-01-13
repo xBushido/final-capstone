@@ -9,6 +9,7 @@ import BookingConsultation from './Components/BookingConsultation';
 import Notification from './Components/Notification/Notification';
 import ReviewForm from './Components/ReviewForm/ReviewForm';
 import Feedback from './Components/ReviewForm/Feedback';
+import { ReviewProvider } from './Components/ReviewForm/ReviewContext';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <BrowserRouter>
             <Notification>
             <Navbar />
+            <ReviewProvider>
             
         
                 <Routes>
@@ -25,9 +27,10 @@ function App() {
                 <Route path="/instant-consultation" element={<InstantConsultation/>} />
                 <Route path="/booking-consultation" element={<BookingConsultation/>} />
                 <Route path="/ReviewForm" element={<ReviewForm/>} />
-                <Route path="/Feedback" element={<Feedback/>} />
+                <Route path="/Feedback/:doctorName?" element={<Feedback />} />
 
                 </Routes>
+            </ReviewProvider>
             </Notification>
         </BrowserRouter>
     

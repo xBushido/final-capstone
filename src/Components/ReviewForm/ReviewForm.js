@@ -1,8 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useReview } from './ReviewContext';
 import './ReviewForm.css';
 
 const ReviewForm = () => {
+  const { review } = useReview();
+
   // Example state to simulate user authentication and appointment data
   const [isLoggedIn, setIsLoggedIn] = useState(true);
   const [appointmentsData, setAppointmentsData] = useState([
@@ -39,10 +42,10 @@ const ReviewForm = () => {
               <td>{appointment.doctorSpeciality}</td>
               <td>
                 <Link to="/Feedback">
-                  <button>Give Review</button>
+                  <button disabled={review && review.doctorId === appointment.id}>Give Review</button>
                 </Link>
               </td>
-              <td>Review</td>
+              <td>{review && review.review}</td>
             </tr>
           ))}
         </tbody>

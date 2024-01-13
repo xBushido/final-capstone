@@ -29,4 +29,9 @@ body {
     border: none;
     cursor: pointer;
   }
+
+  button:disabled {
+    background-color:rgb(78,65,135,30%);
+    cursor: default;
+  }
   
