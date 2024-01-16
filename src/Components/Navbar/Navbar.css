@@ -11,43 +11,7 @@ nav {
     justify-content: space-between;
     background-color: floralwhite;
   }
-  .dropdown-menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    z-index: 1;
-    display: none;
-    min-width: 120px;
-    padding: 8px 0;
-    background-color: #fff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 4px;
-  }
-  
-  .welcome-user {
-    position: relative;
-    cursor: pointer;
-  }
-  
-  .welcome-user:hover .dropdown-menu {
-    display: block;
-  }
-  
-  .dropdown-menu li {
-    display: block;
-    width: 150px;
-    padding:5px;
-  }
-  
-  .dropdown-menu li a {
-    color: #333;
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-  
-  .dropdown-menu li a:hover {
-    color: #2190ff;
-  }
+
   .nav__logo {
     font-size: 2rem;
     font-weight: 600;
@@ -159,3 +123,27 @@ nav {
     color: white;
   }
   
+  .linkname {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 5px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    background-color: #4E4187;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    width: 140px;
+  }
+  
+  .dropdown li {
+    a {
+        color: #FBFBF2;
+    };
+    padding: 8px;
+  }

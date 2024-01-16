@@ -10,6 +10,8 @@ import Notification from './Components/Notification/Notification';
 import ReviewForm from './Components/ReviewForm/ReviewForm';
 import Feedback from './Components/ReviewForm/Feedback';
 import { ReviewProvider } from './Components/ReviewForm/ReviewContext';
+import ProfileCard from './Components/ProfileCard/ProfileCard';
+import ReportsLayout from './Components/ReportsLayout/ReportsLayout';
 
 function App() {
   return (
@@ -28,6 +30,8 @@ function App() {
                 <Route path="/booking-consultation" element={<BookingConsultation/>} />
                 <Route path="/ReviewForm" element={<ReviewForm/>} />
                 <Route path="/Feedback/:doctorName?" element={<Feedback />} />
+                <Route path="/ProfileCard" element={<ProfileCard />} />
+                <Route path="/ReportsLayout" element={<ReportsLayout />} />
 
                 </Routes>
             </ReviewProvider>
